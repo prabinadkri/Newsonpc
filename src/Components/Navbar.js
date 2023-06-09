@@ -1,12 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect } from 'react'
 import {
-  Link
+  Link,useLocation
 } from "react-router-dom"
 
-export class Navbar extends Component {
+const Navbar=()=>  {
   
 
-  render() {
+  
+    const location =useLocation();
+    useEffect(()=>{
+      console.log(location.pathname)
+    }
+    ,[location])
     return (
       <>
         <nav className="navbar navbar-expand-lg bg-light">
@@ -20,8 +25,7 @@ export class Navbar extends Component {
         <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/">Home</Link>
         </li>
-        <li className="nav-item"><Link className="nav-link" to="/">About</Link>
-        </li>
+       
         <li className="nav-item"><Link className="nav-link" to="/business">Business</Link></li>
         <li className="nav-item"><Link className="nav-link" to="/entertainment">Entertainment</Link></li>
        <li className="nav-item"><Link className="nav-link" to="/general">General</Link></li>
@@ -36,7 +40,7 @@ export class Navbar extends Component {
 </nav>
       </>
     )
-  }
+  
 }
 
 export default Navbar
