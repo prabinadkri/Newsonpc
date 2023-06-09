@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/Newsonpc/static/js/main.7962f50f.js",
+    "static/js/787.c19849a6.chunk.js": "/Newsonpc/static/js/787.c19849a6.chunk.js",
+    "index.html": "/Newsonpc/index.html",
+    "main.7962f50f.js.map": "/Newsonpc/static/js/main.7962f50f.js.map",
+    "787.c19849a6.chunk.js.map": "/Newsonpc/static/js/787.c19849a6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.7962f50f.js"
+  ]
+}
