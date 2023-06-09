@@ -4,14 +4,15 @@ import News from './Components/News'
 import {
   BrowserRouter as Router,
   Route,
-  Routes
+  Routes,
+  HashRouter
 } from "react-router-dom"
 export class App extends Component {
   apikey=process.env.REACT_APP_API;
   render() {
     return (
       <div>
-        <Router>
+        <HashRouter>
         <Navbar/>
         <Routes>
           <Route exact path='/' element={<News apikey={this.apikey} key="general" country="in" pageSize={6} category="general"/>}></Route>
@@ -24,7 +25,7 @@ export class App extends Component {
           <Route exact path='/technology' element={<News apikey={this.apikey} key="technology" country="in" pageSize={6} category="technology"/>}></Route>
         </Routes>
         
-        </Router>
+        </HashRouter>
       </div>
     )
   }
